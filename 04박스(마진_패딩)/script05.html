@@ -12,9 +12,17 @@
         ul, li{
             list-style: none;
         }
-        .box { background-color: black;}
-        .box > ul > li { display: inline-block;}
-        .box > ul > li > a { color: white; display: block; width: 50px; height: 50px;}
+        .box { background-color: black; text-align: center;}
+        .box > ul > li { display: inline-block; line-height: 50px;}
+        .box > ul > li > a { color: white; display: block; width: 50px; height: 50px; text-decoration: none;}
+
+        .inner {
+            width: 1000px;
+            margin: 0px auto;
+        }
+        .content {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -28,10 +36,19 @@
             </ul>
         </nav>
     </header>
+    <!-- 슬라이더 영역 -->
     <section>
-        <p>
-            본문내용보내뎡
-        </p>
+        <div>
+            <img src="img/C1_PC1(69).jpg" alt="redVelvet">
+        </div>
+        <div class="inner">
+            <h2>오늘의 발견...</h2>
+            <div>
+                <div class="content">
+                    ....
+                </div>
+            </div>
+        </div>
         </section>
     </section>
 </body>
