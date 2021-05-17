@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0 auto;}
+        .list {width: 50%;margin: 0 auto;}
+        p {height: 100px;}
+        .content {position: relative;}
+        .inner1 {background-color: aqua;}
+        .inner2 {
+            background-color: brown;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        .inner3 {background-color: green;}
+    </style>
+</head>
+<body>
+    <!-- 
+        포지션 - html에서 3d형식의 z축 방향으로 컨텐츠를 끌어올려서 상자를 배치.
+
+        abdolute - 부모요소 위치 기반으로 포지션
+        relative - 현재 위치 기반으로 포지션
+
+        포지션 첫번째 규칙 - z축방향으로 올릴 컨텐츠에 포지션 absilute
+     -->
+    <div class="list">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+</body>
+</html>

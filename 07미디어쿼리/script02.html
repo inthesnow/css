@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 전체화면 상자 6, 테블릿화면 상자 4개, 휴대폰화면 상자 2개 */
+        .box {width: 80%; margin: 0 auto; overflow: hidden;}
+        .inner {width: 16.6666%; float: left; border: 1px solid #777; box-sizing: border-box;}
+        
+        @media (min-width:1300px) {
+        .inner {width: 16.6666%; float: left; border: 1px solid #777; box-sizing: border-box;}
+        }
+        @media (max-width:1299px) and (min-width:768){
+            .inner {width: 25%; float: left; border: 1px solid #777; box-sizing: border-box;}
+        }
+        @media (max-width:767px) {
+            .inner {width: 50%; float: left; border: 1px solid #777; box-sizing: border-box;}
+        }
+    </style>
+
+</head>
+<body>
+    <h2>미디어 퀘리를 이용한 그리드</h2>
+
+    <div class="box">
+        <div class="inner">box</div>
+        <div class="inner">box</div>
+        <div class="inner">box</div>
+        <div class="inner">box</div>
+        <div class="inner">box</div>
+        <div class="inner">box</div>
+    </div>
+</body>
+</html>

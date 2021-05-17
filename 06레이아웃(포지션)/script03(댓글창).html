@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {width: 80%; margin: 0 auto; border: 1px solid #777; position: relative; padding: 10px; overflow: hidden;}
+        .wrap-img {
+            position: absolute; left: 10px; top: 10px;
+        }
+        .wrap-img img {width: 50px;}
+        .wrap-text textarea {width: 100%; box-sizing: border-box;}
+        .wrap-btn, .wrap-text{padding-left: 60px;}
+        .wrap-btn {overflow: hidden;}
+        .left {float: left;}
+        .right {float: right;}
+        .wrap-btn input {display: block;}
+        .wrap-title {width: 100%; box-sizing: border-box; float: left; overflow: hidden;}
+        .title, .content {padding-left: 60px;}
+        .del, .upd {float: right;}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="wrap">
+            <div class="wrap-img"><!-- 이미지영역 -->
+                <img src="img/bgimg.png">
+            </div>
+            <div class="wrap-text"> <!--텍스트영역-->
+                <textarea>....</textarea>
+            </div>
+            <div class="wrap-btn"> <!--버튼영역-->
+                <div class="left">
+                    <input type="text">
+                    <input type="text" style="margin-top: 3px;">
+                </div>
+                <button class="right">등록하기</button>
+            </div>
+            
+        </div>
+        <div class="wrap">
+            <div class="wrap-img"><!-- 이미지영역 -->
+                <img src="img/bgimg.png">
+            </div>
+            <div class="wrap-title">
+                <div class="title">제목</div>
+                <div class="content">내용</div>
+            </div>
+            <button class="del">삭제</button>
+            <button class="upd">수정</button>
+            
+        </div>
+    </div>
+</body>
+</html>
