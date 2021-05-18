@@ -1,0 +1,160 @@
+/* 1. 웹폰트 선언 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+
+/* 2.디자인 시작시 기본선언 */
+body, html {
+    font-family: 'Noto Serif KR', serif;
+    
+    width: 100%;
+    min-width: 320px;
+}
+img {
+    max-width: 100%; /*사이즈가 변했을떄 넓이 유지*/
+    height: auto;
+}
+input, textarea, button, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: none;
+}
+ul, li, dl, ol {
+    list-style: none;
+}
+/* 버튼과 인풋태그의 윤곽 변경 */
+.btn{border-radius: 0px;}
+.form-control{border-radius: 0px;}
+/*====헤더====*/
+.header_col1{
+    background-color: #eee;
+    overflow: hidden;
+    height: 52px;
+    line-height: 52px;
+}
+.top_width>ul>li.on {
+    /*선택자를 붙여서 사용하게 되면 li태그안에 클래스이름이 on인 것을 의미*/
+    border-top: 1px solid #d2d0d0;
+    line-height: 42px;
+    border-left: 1px solid #d2d0d0;
+    border-right: 1px solid #d2d0d0;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    font-weight: 500;
+
+    border-bottom: 5px solid #038fc3;
+}
+
+.top_width > ul > li {
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    font-weight: 700;
+}
+.top_width > ul > li > a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+}
+.top_width{overflow: hidden; width: 1240px; margin: 0 auto;}
+.fl_left{float: left;}
+.fl_right{float: right;}
+
+.fl_right > a{
+    background-color: #fff;
+    text-decoration: none;
+    color: #666;
+    padding: 7px;
+    border: 1px solid #d2d2d2;
+}
+/*====아래쪽헤더====*/
+.navbar{
+    margin: 0;
+}
+.top_hide {display: none;}
+.logo a {
+    background-image: url("../img/logo.png");
+    display: block;/*a태그의 컨텐츠요소가 없기때문에 강제조정*/
+    width: 200px;
+    height: 33px;
+    margin: 23 0 0;
+    background-repeat: no-repeat;
+}
+.logo {float: left;}
+.top_menu {float: left; margin-left: 30px;}
+.top_menu > ul > li {
+    display: inline-block;
+}
+.top_menu > ul > li > a {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+.top_menu > ul > li > a:hover {color: #39f;}
+
+/*====헤더2디자인====*/
+.custom_header {
+    background-color: #263238;
+}
+
+.custom_header nav a {
+    color: #fff;
+}
+.navbar-brand {
+    padding: 10px 15px;
+}
+.custom_header .nav > li > a:hover,
+.custom_header .nav > li > a:focus {
+    background-color: #304037;
+}
+
+.custom_header .navbar-toggle,
+.custom_header .navbar-toggle .icon-bar {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.dropdown-menu > li > a {
+    color: #333;
+}
+@media(max-width:767px) {
+    .dropdown-menu>li>a{
+        color: #eee;
+    }
+}
+
+/*====footer====*/
+footer {
+    background-color: #263238;
+    color: #eee;
+    padding: 40px;
+}
+footer .copyright {
+    font-size: 15px;
+    font-weight: 500;
+}
+footer .footer-menu >li {
+    display: inline-block;
+}
+footer .footer-menu >li >a {
+    display: block;
+    padding: 0 15px;
+    color: #eee;
+    text-decoration: none;
+}
+footer .footer-menu >li >:focus {
+    color: #fff;
+}
+
+/*====슬라이더영역====*/
+.slide-list {
+    padding: 0;
+}
+.carousel-control.right,
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0)0%, rgba(0,0,0,0)100%);
+}
