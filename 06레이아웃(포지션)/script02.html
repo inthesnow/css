@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0 auto;}
+        section {width:80%; height: 500px; margin: 0 auto; overflow: hidden; background-color: seagreen; position: relative;}
+        .box {float: left; width: 25.0000%; height: 200px; box-sizing: border-box; background-color: khaki;}
+        .pos {
+            background-color: purple;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">
+            박스1
+            <div class="pos">포지션</div>
+        </div>
+    </section>
+</body>
+</html>
