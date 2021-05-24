@@ -1,0 +1,10 @@
+/* =====마이페이지 디자인===== */
+.m-control  .m-title {
+    vertical-align: middle;
+    width: 200px; 
+   
+}
+
+.m-control .form-control {
+    width: 200px;
+}

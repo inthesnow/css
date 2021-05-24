@@ -27,24 +27,40 @@
         padding: 0;
     }
 }
-/*====로그인====*/
+
+/* =====로그인===== */
 .login-form {
+
     padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px;
 }
-.login-form-img {
+.login-form img {
     width: 100%;
+
 }
+/* 전체화면 */
 .login-form-inner {
-    padding: 45px 30px;
+    padding: 44px 30px;
 }
-/*테블릿환경*/
-@media(min-width: 992px) and (max-width:1199) { /*992~1199*/
+
+/* 테블릿환경 */
+@media(min-width: 992px) and (max-width: 1199px) { /* 992~1199 */
     .login-form-inner {
         padding: 12px 30px;
     }
 }
-@media(max-width:768) { /*~768*/
+
+/* 모바일 */
+@media(max-width: 768px) {
     .login-form-inner {
         padding: 12px 0px;
     }
+    .login-form {
+        padding: 50px;
+    }
 }
+
+
+
