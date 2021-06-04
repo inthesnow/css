@@ -87,36 +87,39 @@
                     </div>
 
 
-                    <form>
+                    <form name="joinForm">
                         <div class="form-group">
                             <label>아이디</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="아이디는 영문(4~12글자)" name="" >
+                                <input type="text" class="form-control" placeholder="아이디는 영문(4~12글자)" name="id" >
                                 <div class="input-group-btn">
                                   <button class="btn btn-primary" type="button">아이디중복체크</button>
                                 </div>
                             </div>
+                            <div id="idMsg"></div>
                         </div>
 
                         <div class="form-group">
                             <label>비밀번호</label>
-                            <input type="password" class="form-control" placeholder="비밀번호(영/대 소문자, 숫자조합 8~16)" name="">
+                            <input type="password" class="form-control" placeholder="비밀번호(영/대 소문자, 숫자조합 8~16)" name="pw">
                         </div>
+                        <div id="pwMsg"></div>
 
                         <div class="form-group">
                             <label>비밀번호 확인</label>
-                            <input type="password" class="form-control" placeholder="비밀번호를 확인하세요" name="">
+                            <input type="password" class="form-control" placeholder="비밀번호를 확인하세요" name="pwcheck">
                         </div>
+                        <div id="pwcheckMsg"></div>
 
                         <div class="form-group">
                             <label>이름</label>
-                            <input type="text" class="form-control" placeholder="비밀번호를 확인하세요" name="">
+                            <input type="text" class="form-control" placeholder="이름을 입력하세요" name="name">
                         </div>
 
                         <div class="form-group">
                             <label>휴대폰번호</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="핸드폰 번호 (-제외)" name="" >
+                                <input type="text" class="form-control" placeholder="핸드폰 번호 (-제외)" name="phone" >
                                 <div class="input-group-btn">
                                   <button class="btn btn-primary" type="button">인증하기</button>
                                 </div>
@@ -126,7 +129,7 @@
                         <div class="form-group">
                             <label>주소</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="우편번호" name="" readonly>
+                                <input type="text" class="form-control" placeholder="우편번호" name="postcode" readonly>
                                 <div class="input-group-btn">
                                   <button class="btn btn-primary" type="button">주소찾기</button>
                                 </div>
@@ -135,12 +138,12 @@
 
                         <div class="form-group">
                             <label>기본주소</label>
-                            <input type="text" class="form-control" placeholder="기본주소" name="">
+                            <input type="text" class="form-control" placeholder="기본주소" name="address">
                         </div>
 
                         <div class="form-group">
                             <label>상세주소</label>
-                            <input type="text" class="form-control" placeholder="상세주소" name="">
+                            <input type="text" class="form-control" placeholder="상세주소" name="adr-detail">
                         </div>
 
                         <button type="button" class="btn btn-primary btn-block" >가입하기</button>
@@ -179,5 +182,45 @@
         </div>        
     </footer>
 
+    <SCript>
+        var form =  document.joinForm;
+        form.id.addEventListener("input", function(){
+            if(form.id.value.length ==0){
+                form.id.style.borderColor = "black";
+                document.getElementById("idMsg").innerHTML="";
+            } else if(form.id.value.length <4 || form.id.value.length > 12){
+                form.id.style.borderColor = "red";
+                document.getElementById("idMsg").innerHTML="아이디 규칙을 확인하세요.";
+            } else {
+                form.id.style.borderColor = "green";
+                document.getElementById("idMsg").innerHTML="";
+            }
+        });
+        form.pw.addEventListener("input", function(){
+            if(form.pw.value.length ==0){
+                form.pw.style.borderColor = "black";
+                document.getElementById("pwMsg").innerHTML="";
+            } else if(form.pw.value.length <8){
+                form.pw.style.borderColor = "red";
+                document.getElementById("pwMsg").innerHTML="비밀번호 규칙을 확인하세요";
+            } else {
+                form.pw.style.borderColor = "green";
+                document.getElementById("pwMsg").innerHTML="";
+            }
+        });
+        form.pwcheck.addEventListener("input", function(){
+            if(form.pwcheck.value.length ==0){
+                form.pwcheck.style.borderColor = "black";
+                document.getElementById("pwcheckMsg").innerHTML="";
+            } else if(form.pwcheck.value != document.joinForm.pw.value){
+                form.pwcheck.style.borderColor = "red";
+                document.getElementById("pwcheckMsg").innerHTML="동일하지 않습니다";
+            } else {
+                form.pwcheck.style.borderColor = "green";
+                document.getElementById("pwcheckMsg").innerHTML="";
+            }
+        });
+        
+    </SCript>
 </body>
 </html>
